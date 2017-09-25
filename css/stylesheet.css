@@ -1,6 +1,29 @@
 @charset "utf-8";
-@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
 @import url("https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
+@import url("./reset.css");
+
+/* 숨김 컨텐츠 */
+
+.hidden {
+  position: absolute;
+  left: -9999em;
+}
+
+
+/* 하이퍼링크 스타일 */
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover,
+a:focus {
+  color: white;
+}
+
 
 /* 본문 스타일 */
 
@@ -24,7 +47,6 @@ body {
 .main-content,
 .slogan,
 .footer {
-  height: 100px;
   width: 100%;
 }
 
@@ -49,18 +71,53 @@ body {
 }
 
 
-}
-
-}
-
 /* 모바일 */
+
 @media all and (max-width:999px) {
-  body {
+  .header {
     background: #D2DBD8;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  .member {
+    order: -1;
+    background: #ADCFBF;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .member a {
+    display: block;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    height: 30px;
+  }
+  .logo {
+    padding: 0.5rem 1rem;
+  }
+  .search {
+    padding: 0 1rem 1rem 1rem;
+  }
+  #search {
+    border: 1px solid #aaa;
+    width: calc(100% - 100px);
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+  }
+  .btn-search {
+    border: 0;
+    border-radius: 5px;
+    padding: 0.2rem 1rem;
+    background: #988574;
+    color: #fff;
+    height: 30px;
   }
 }
 
+
 /* 데스크탑 */
+
 @media all and (min-width:1000px) {
   .wrapper {
     align-items: center;
@@ -70,7 +127,6 @@ body {
   .main-content,
   .slogan,
   .footer {
-    height: 100px;
     width: 80%;
   }
   body {
