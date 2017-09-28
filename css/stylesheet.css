@@ -29,7 +29,6 @@
     /* 레이아웃 */
     
     .wrapper {
-      background: #D1D1D1;
       display: flex;
       flex-direction: column;
       height: 100vh;
@@ -41,10 +40,6 @@
     .slogan,
     .footer {
       width: 100%;
-    }
-    
-    .header {
-      background: #E7C7D7;
     }
     
     .navigation {
@@ -119,8 +114,8 @@
         width: 80%;
       }
       .header {
-        background: yellow;
-        position: relative
+        position: relative;
+        padding-bottom: 1rem;
       }
       .logo {
         position: absolute;
@@ -136,5 +131,24 @@
         display: block;
         padding: 1rem 0.5rem;
         margin-left: 0.5rem;
+      }
+      .search-wrap {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .search input {
+        width: 400px;
+        height: 35px;
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        padding: 0 0 0 1rem;
+        margin-right: 1rem;
+      }
+      .btn-search {
+        border: 1px solid #aaa;
+        border-radius: 5px;
+        background: #988574;
+        color: #fff;
+        padding: 0 1rem;
       }
     }
